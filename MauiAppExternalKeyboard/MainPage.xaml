@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppExternalKeyboard.MainPage"
+             Loaded="MainPage_OnLoaded">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10,0"
+            HorizontalOptions="Center"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Add some Text and Press 'Enter' with both external keyboard and android keyboard."
+                Style="{StaticResource SubHeadline}" />
+
+            <Label
+                Text="{Binding Message}"
+                TextColor="Red"
+                Style="{StaticResource SubHeadline}"/>
+
+            <Entry 
+                x:Name="_entry"
+                Text="{Binding EntryValue}"
+                IsPassword="True"
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"
+                ReturnType="Go"
+                ReturnCommand="{Binding SubmitCommand}"/>
+
+            <Switch />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
