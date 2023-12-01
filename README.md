@@ -11,5 +11,5 @@ This project allows experimenting with this:
 
 **Steps that work (internal keyboard):**
 - Run app and enter some text on Entry
-- Press "Enter" using the "internal" keyboard
+- Press the submit button using the "internal" keyboard
 - **Result:** Command executes as it should
